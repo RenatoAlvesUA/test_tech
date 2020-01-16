@@ -1,0 +1,230 @@
+@import "theme_color";
+@import "responsive";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+p {
+  color: $text-color;
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 20px 0 20px 0;
+  margin: 0px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 0;
+}
+
+.b-r {
+  border-right-width: thin;
+  border-right-style: solid;
+  border-right-color: $dark-color;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 */
+}
+
+/*  GRID OF TWO  */
+.span_100 {
+  width: 100%;
+}
+.span_50 {
+  width: 49.2%;
+}
+
+.span_25 {
+  width: 25%;
+}
+.span_70 {
+  width: 69%;
+}
+p span {
+  display: block;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5% 0 5%;
+}
+
+.card {
+  min-height: 140px;
+  border-color: $dark-color;
+  border-width: thin;
+  cursor: pointer;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 0 20px 0 20px;
+  margin: 25px 0 25px 0;
+
+  &.single {
+    cursor: default;
+  }
+  .span_70 {
+    .description {
+      padding-top: 0;
+      @media #{$breakpoint} {
+        padding-top: 20px;
+      }
+    }
+
+    &.single {
+      text-align: right;
+    }
+
+    padding-left: 20px;
+    @media #{$breakpoint} {
+      padding-left: 0;
+    }
+
+    .title {
+      padding-top: 20px;
+    }
+  }
+  .span_25 {
+    &.single {
+      float: right;
+    }
+  }
+}
+.card:first-child {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   #FORM
+   ========================================================================== */
+input {
+  outline: none;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.input-group {
+  position: relative;
+  margin: 0;
+}
+
+.input--style-6 {
+  background: transparent;
+  line-height: 38px;
+  border: 1px solid $border-color;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: $secondary-color;
+  font-size: 15px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 0 20px;
+}
+
+.input--style-6::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: $secondary-color;
+}
+
+.input--style-6:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $secondary-color;
+  opacity: 1;
+}
+
+.input--style-6::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $secondary-color;
+  opacity: 1;
+}
+
+.input--style-6:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $secondary-color;
+}
+
+.input--style-6:-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $secondary-color;
+}
+
+.input--style-6:focus {
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+@media #{$breakpoint} {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media #{$breakpoint} {
+  .span_100,
+  .span_50,
+  .span_25,
+  .span_70 {
+    width: 100%;
+  }
+}

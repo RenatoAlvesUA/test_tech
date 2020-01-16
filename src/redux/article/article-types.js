@@ -1,0 +1,5 @@
+export const ArticleActionTypes = {
+  ADD_KEYWORD: "ADD_KEYWORD",
+  ADD_ARTICLES: "ADD_ARTICLES",
+  ADD_SINGLE_ARTICLE: "ADD_SINGLE_ARTICLE"
+};
